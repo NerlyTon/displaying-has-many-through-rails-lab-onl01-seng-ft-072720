@@ -1,0 +1,6 @@
+rails g resource Doctor name:string department:string --no-test-framework --skip-routes
+rails g resource Patient name:string --no-test-framework --skip-routes
+rails g resource Appointment appointment_datetime:datetime  patient:belongs_to doctor:belongs_to --no-test-framework --skip-routes
+rails g migration add_age_to_patients age:integer --no-test-framework
+
+rails g migration add_more_info_to_appointments patient:string doctor:string --no-test-framework
